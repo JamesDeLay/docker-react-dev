@@ -1,9 +1,13 @@
 version: '3.8'
 services:
-  server:
-    build: 
-      context: ./server
-      dockerfile: Dockerfile
-  client:
-    depends_on:
-      - server
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+      - /app/node_modules

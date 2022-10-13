@@ -12,11 +12,8 @@ function App() {
     <div className="App">
       <header className="App-header">
         <p>
-          Hello World!
+          Testing
         </p>
-        <button className="btn">
-          API Call
-        </button>
       </header>
     </div>
   );
